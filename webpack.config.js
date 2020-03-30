@@ -5,7 +5,7 @@ module.exports = {
 	mode: "development",
 	entry: "./src/index.tsx",
 	output: {
-		path: path.resolve(__dirname, 'build'),
+		path: path.resolve(__dirname, 'dist'),
     	filename: "bundle.js",
 
     },
@@ -30,13 +30,9 @@ module.exports = {
     	extensions: [".ts", ".tsx", ".js", ".json"]
     },
 	devServer: {
-        contentBase: path.resolve(__dirname, 'build'),
+        contentBase: path.resolve(__dirname, 'dist'),
 		filename: 'bundle.js',
 		open: true,
-    },
-	externals: {
-    	"react": "React",
-    	"react-dom": "ReactDOM"
     },
 	plugins: [
 		new HtmlWebpackPlugin({template: './src/index.html'})
