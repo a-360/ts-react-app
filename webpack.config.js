@@ -5,7 +5,7 @@ module.exports = {
 	mode: "development",
 	entry: "./src/index.tsx",
 	output: {
-		path: path.resolve(__dirname, 'dist'),
+		path: path.resolve(__dirname, 'build'),
     	filename: "bundle.js",
 
     },
@@ -30,7 +30,7 @@ module.exports = {
     	extensions: [".ts", ".tsx", ".js", ".json"]
     },
 	devServer: {
-        contentBase: path.resolve(__dirname, 'dist'),
+        contentBase: path.resolve(__dirname, 'build'),
 		filename: 'bundle.js',
 		open: true,
     },
